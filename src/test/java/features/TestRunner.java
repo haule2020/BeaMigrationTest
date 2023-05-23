@@ -17,7 +17,7 @@ class TestRunner {
     @Test
      void testParallel() {
         Results results = Runner.path("classpath:features")
-                .outputCucumberJson(true).tags("@FunctionalTest1")
+                .outputCucumberJson(true).tags("@apiTest")
                 .parallel(1);
                 generateReport(results.getReportDir());
          assertEquals(0, results.getFailCount(), results.getErrorMessages());

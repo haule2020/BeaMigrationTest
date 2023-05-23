@@ -26,9 +26,8 @@ pipeline {
             script {
                 publishHTML (target: [
                     allowMissing: false, 
-                    alswaysLinkToLastBuild: true, 
                     keepAll: true,  
-                    reportDir: 'target/cucumber-html-report/',
+                    reportDir: 'target/cucumber-html-reports/',
                     reportFiles: 'overview-features.html',
                     reportName: 'KarateDemo Report'])
             }           
