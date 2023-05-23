@@ -10,7 +10,7 @@ pipeline {
       steps {
         
             script {
-                sh (mvn test -DskipFailures=false -Dkarate.options='--tags @apiTest')
+                sh ("mvn test -DskipFailures=false -Dkarate.options='--tags @apiTest'")
             }
            
       }
