@@ -16,7 +16,7 @@ pipeline {
       }
     }
 
-    stage('Test Execution') {
+    stage('Upload report') {
       steps {
         
             script {
