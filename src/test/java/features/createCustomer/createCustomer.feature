@@ -1,37 +1,14 @@
 @apiTest
-Feature: sample karate test script
-  for help, see: https://github.com/karatelabs/karate/wiki/IDE-Support
+Feature: Create customers
 
   Background:
-    * url 'https://jsonplaceholder.typicode.com'
+    * def URL  = 'https://jsonplaceholder.typicode.com/users'
     * def requestData = read ('classpath:resources/requests/createCustomer.json')
     * def responseData = read ('classpath:resources/responses/createCustomer.json')
 
-  Scenario: get all users and then get the first user by id fadfsdf
-    Given path 'users'
-    When method get
-    Then status 200
-
-    * def first = response[0]
-
-    Given path 'users', first.id
-    When method get
-    Then status 200
-
-  Scenario: create a user and then get it by id
-    Given url 'https://jsonplaceholder.typicode.com/users'
+  Scenario: create a customers
+    Given url URL
     * print requestData.createCustomer
     And request requestData.createCustomer
     When method post
     Then status 201
-
-    # * def id = response.id
-    # * print 'created id is: ', id
-
-    # * print responseData
-
-
-    # When method get
-    # Then status 200
-    # And match response contains user
-  
