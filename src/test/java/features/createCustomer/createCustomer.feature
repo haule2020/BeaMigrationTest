@@ -1,5 +1,5 @@
 @apiTest
-Feature: Create customers
+Feature: Create customers test
 
   Background:
     * def URL  = 'https://jsonplaceholder.typicode.com/users'
