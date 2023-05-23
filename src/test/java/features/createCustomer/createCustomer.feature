@@ -7,7 +7,7 @@ Feature: sample karate test script
     * def responseData = read ('classpath:resources/responses/createCustomer.json')
 
 @FunctionalTest
-  Scenario: get all users and then get the first user by id
+  Scenario: get all users and then get the first user by id fadfsdf
     Given path 'users'
     When method get
     Then status 200
