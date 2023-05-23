@@ -5,11 +5,11 @@ pipeline {
         maven 'Maven 3.9.2'
     }
   stages {
-    stage('Checkout Scm') {
-      steps {
-        git 'https://github.com/haule2020/BeaMigrationTest.git'
-      }
-    }
+    // stage('Checkout Scm') {
+    //   steps {
+    //     git 'https://github.com/haule2020/BeaMigrationTest.git'
+    //   }
+    // }
     stage('Test Execution') {
       steps {
         
