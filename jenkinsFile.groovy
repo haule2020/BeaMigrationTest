@@ -8,17 +8,17 @@ pipeline {
     }
     stage('Test Execution') {
       steps {
-        {
+        
             script {
                 sh (mvn test -DskipFailures=false -Dkarate.options='--tags @apiTest')
             }
-        }     
+           
       }
     }
 
     stage('Test Execution') {
       steps {
-        {
+        
             script {
                 publishHTML (target: [
                     allowMissing: false, 
@@ -27,8 +27,7 @@ pipeline {
                     reportDir: 'target/cucumber-html-report/',
                     reportFiles: 'overview-features.html',
                     reportName: 'KarateDemo Report'])
-            }
-        }     
+            }           
       }
     }
 
