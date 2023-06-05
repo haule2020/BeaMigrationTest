@@ -10,6 +10,7 @@ Feature: Get Customer details
     Given path 'users'
     When method get
     When status 200
+    And match response == '#[12]'
     And  match each response contains deep responseData.viewCustomerResponse
 
   Scenario Outline: get customer by id <id>
