@@ -8,7 +8,7 @@ Feature: Create customers test
 
   Scenario: create a customers
     Given url URL
-    * print requestData.createCustomer
     And request requestData.createCustomer
     When method post
     Then status 201
+    And match response.id ==  '#number'

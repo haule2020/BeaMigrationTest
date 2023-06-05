@@ -18,7 +18,7 @@ class TestRunner {
      void testParallel() {
         Results results = Runner.path("classpath:features")
                 .outputCucumberJson(true).tags("@apiTest")
-                .parallel(1);
+                .parallel(5);
                 generateReport(results.getReportDir());
          assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }

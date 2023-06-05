@@ -14,5 +14,8 @@ function fn() {
   } else if (env == 'e2e') {
     // customize
   }
+
+  config.baseUrl = 'https://jsonplaceholder.typicode.com';
+  
   return config;
 }
