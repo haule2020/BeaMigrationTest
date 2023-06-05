@@ -17,7 +17,7 @@ Feature: Get Customer details
     Given path 'users', <id>
     When method get
     Then status 200
-    ANd match response.id == <id>
+    And match response.id == <id>
 
     Examples:
       | id |
