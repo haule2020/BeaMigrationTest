@@ -16,6 +16,6 @@ function fn() {
   }
 
   config.baseUrl = 'https://jsonplaceholder.typicode.com';
-  
+
   return config;
 }

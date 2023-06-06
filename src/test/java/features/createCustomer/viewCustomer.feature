@@ -7,10 +7,10 @@ Feature: Get Customer details
 
   Scenario: get all customers
     Given url baseUrl
-    Given path 'users'
+    And path 'users'
     When method get
-    When status 200
-    And match response == '#[12]'
+    Then status 200
+    And match response == '#[10]'
     And  match each response contains deep responseData.viewCustomerResponse
 
   Scenario Outline: get customer by id <id>
