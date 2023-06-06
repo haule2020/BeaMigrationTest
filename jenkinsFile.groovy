@@ -17,5 +17,18 @@ pipeline {
         }    
       }
     }
+        stage('Send mail') {
+      steps {
+        script {
+             try {
+                sh ("mvn test -DskipFailures=false -Dkarate.options='--tags @apiTest'")      
+                  }
+              finally
+                {
+                publishHTML (target: [allowMissing: false, keepAll: true,  reportDir: 'target/cucumber-html-reports/',reportFiles: 'overview-features.html',reportName: 'KarateDemo Report'])
+           }    
+        }    
+      }
+    }
   }
 }
